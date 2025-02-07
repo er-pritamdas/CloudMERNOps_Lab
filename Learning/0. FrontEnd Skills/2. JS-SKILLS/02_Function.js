@@ -52,4 +52,55 @@ console.log(Name(1,2))
 
 
 // IIFE - Immediately Invoked Function Expression or Slef Invoing Function
+x = (function (){console.log("Automatically Invoked")})(); // This will not throw any error
+(function (){console.log("Automatically Invoked")})(); /*
+This function will throw error,
+*/
+
+
+// ... is a rest parameter 
+// Function Argument Length
+function NameOfFunction(...Variable){
+    return arguments.length; // Arguments object
+}
+console.log("Argument Length " + NameOfFunction(1,1,2,3,4,5,6,7,8))
+
+
+//More About Argument Object
+let sum = 0;
+function Args (...total){
+    for (let i in arguments){
+        sum = sum + arguments[i];
+    }
+    return sum, arguments.length;
+}
+sum, Length = Args(1,2,3)
+console.log(`Total Sum ${sum}  and Total items ${Length}`)
+
+
+
+//Function call() methods
+const person = {
+    fullNameWithCity: function(city) {
+      return this.firstName + " " + this.lastName + " " + city;
+    },
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+  }
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  const person2 = {
+    firstName:"Mary",
+    lastName: "Doe"
+  }
+  
+  // This will return "John Doe":
+console.log(person.fullNameWithCity.call(person1, "Delhi")) //With Arguments
+console.log(person.fullName.call(person2)) //Without Arguments
+
+
+//Function Apply() methods
 
