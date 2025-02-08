@@ -107,12 +107,44 @@ const person = {
     firstName:"Mary",
     lastName: "Doe"
   }
-  
   // This will return "John Doe":
 console.log(person.fullNameWithCity.call(person1, "Delhi")) //With Arguments
 console.log(person.fullName.call(person2)) //Without Arguments
 
 
 //Function Apply() methods
+const FullObj = {
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  
+  const Marry = {
+    firstName: "Mary",
+    lastName: "Doe"
+  }
+  // This will return "Mary Doe":
+  FullObj.fullName.apply(Marry);
+//   The call() method takes arguments separately.
+//   The apply() method takes arguments as an array.
 
-``
+
+
+// Function Bind() methods
+const BindPerson = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  
+  const member = {
+    firstName:"Hege",
+    lastName: "Nilsen",
+  }
+  
+  let fullName = BindPerson.fullName.bind(member);
+
+
+  // 
