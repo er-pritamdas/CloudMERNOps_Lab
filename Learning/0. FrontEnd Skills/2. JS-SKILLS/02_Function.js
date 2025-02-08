@@ -46,7 +46,7 @@ const ArrowFunc = (a,b) => a**b //Implicit Return
 console.log(ArrowFunc(2,2)); //Function Execution
 
 
-//Way7: Function Constructor
+//Way 7: Function Constructor
 const Name = new Function("a","b", "return a+b")
 console.log(Name(1,2))
 
@@ -60,6 +60,7 @@ This function will throw error,
 
 // ... is a rest parameter 
 // Function Argument Length
+// Argements : This will count the number of variables passed to the function, and not the variables used in the function
 function NameOfFunction(...Variable){
     return arguments.length; // Arguments object
 }
@@ -76,6 +77,16 @@ function Args (...total){
 }
 sum, Length = Args(1,2,3)
 console.log(`Total Sum ${sum}  and Total items ${Length}`)
+
+
+// Returning Multiple Values from a Function
+function Sum(a,b){
+    return [a,b];
+}
+[x,y] = Sum(21,34);
+console.log(x);
+console.log(y);
+
 
 
 
@@ -104,3 +115,4 @@ console.log(person.fullName.call(person2)) //Without Arguments
 
 //Function Apply() methods
 
+``

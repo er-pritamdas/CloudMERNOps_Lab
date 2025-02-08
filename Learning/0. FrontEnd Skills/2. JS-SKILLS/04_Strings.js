@@ -23,7 +23,7 @@ console.log(MyStr)
 console.log(typeof MyStr)
 
 
-//Escape Caracters
+//Escape Characters
 
 
 
@@ -49,7 +49,7 @@ console.log(NObj1 === NObj2); // Both are object so false
 
 
 // String Methods ------------------------------------------------------------------------------------
-// All String methods Return a new String, they donot modify the actual strin, as they are immutable
+// All String methods Return a new String, they donot modify the actual string, as they are immutable
 
 // Length
 let LengthString = "ABCDEFGHIJKLMNOPQRSTUVWWXYZ"
@@ -96,7 +96,7 @@ console.log(text.slice(-12. -6)) //  from -12 to -6
 console.log(text) // Counts starts from 0 
 console.log(text.substring(7,13)) // doesnot support negative indexing (<0 = 0)
 console.log(text.substring(-12,-6)) // doesnot support negative indexing (<0 = 0)
-//subst()
+//substr()
 console.log(text.substr(7,6)) // prints the 6 characters from 7th position
 console.log(text.substr(-2,6)) // prints the 6 characters from last 2nd position
 
