@@ -88,8 +88,6 @@ console.log(x);
 console.log(y);
 
 
-
-
 //Function call() methods
 const person = {
     fullNameWithCity: function(city) {
@@ -114,37 +112,60 @@ console.log(person.fullName.call(person2)) //Without Arguments
 
 //Function Apply() methods
 const FullObj = {
-    fullName: function() {
-      return this.firstName + " " + this.lastName;
+    fullName: function(city, state) {
+      return this.firstName + " " + this.lastName + " is from " + city + ", " + state;
     }
   }
-  
   const Marry = {
     firstName: "Mary",
     lastName: "Doe"
   }
+  const prit = {
+    firstName: "Pritam",
+    lastName : "Das"
+  }
   // This will return "Mary Doe":
   FullObj.fullName.apply(Marry);
+  console.log(FullObj.fullName.apply(prit, ["Chennai", "Tamil Nadu"])); // Must pass the argument in arrays unlike call
 //   The call() method takes arguments separately.
 //   The apply() method takes arguments as an array.
 
 
 
-// Function Bind() methods
+// Function Bind() methods : Borrows a function from another object
 const BindPerson = {
     firstName:"John",
     lastName: "Doe",
     fullName: function () {
-      return this.firstName + " " + this.lastName;
+      console.log(this.firstName + " " + this.lastName)
     }
   }
-  
-  const member = {
+const member = {
     firstName:"Hege",
     lastName: "Nilsen",
   }
-  
   let fullName = BindPerson.fullName.bind(member);
 
 
-  // 
+// More about bind objects
+// setTimeout() Function will accept the callback function, but we cannot use the functions of the objects as callback function
+// to use the function inside the objects we can use the bind 
+setTimeout(BindPerson.fullName, 2000) // This will not give us the resulsts
+displayBindPerson = BindPerson.fullName.bind(BindPerson)
+setTimeout(displayBindPerson, 2000)
+
+
+// Function Clousers 
+// Undeclared variables are always global , even if they are created inside the function or any scope 
+function myCounter() {
+  let counter = 0;
+  return function() {
+    counter++;
+    return counter;
+  };
+}
+const add = myCounter();
+add();
+add();
+add();
+// the counter is now 3

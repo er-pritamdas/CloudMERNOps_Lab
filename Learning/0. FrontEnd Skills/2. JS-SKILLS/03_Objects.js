@@ -1,33 +1,39 @@
-
-// To create a  Object like this
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+// To create a  Object like this :  Object Literal Method
+const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
 console.log(`${typeof person}`)
 
-// Second way of creating Obj
+
+// Second way of creating Obj : Constructor Method
 const obj1 = {};
 console.log(`${typeof obj1}`)
+
 
 // Creating Obj usaing New Keyword
 obj = new Object()
 obj.name = "Pritam";
 obj.surname = "Das";
 
+
 // Adding Property
 obj.xyz = 12
+console.log(`${obj}`)
 console.log(`${JSON.stringify(obj)}`)
+
 
 // Deleting Property
 delete obj.xyz
 console.log(`${JSON.stringify(obj)}`)
+
 
 // accessing objects
 console.log(`${obj}`)
 console.log(`${Object.values(obj)}`)
 console.log(`${Object.entries(obj)}`)
 
+
 // Accessing Object Methods
-obj.FullName= function(){
-return `my name is ${obj.name} ${obj.surname}`;
+obj.FullName = function () {
+    return `my name is ${obj.name} ${obj.surname}`;
 };
 // This will print the Fucntion Reference
 console.log(obj.FullName)
@@ -43,8 +49,7 @@ console.log(y)
 y = 40;
 console.log(y)
 console.log(x)
-
-// mutable
+// Object is mutable
 let NewObj = {}
 NewObj = obj;
 console.log(obj.name)
@@ -55,7 +60,7 @@ console.log(NewObj.name)
 
 
 // this is a object constructor
-function Indians(name, age, height, nation="hindi"){
+function Indians(name, age, height, nation = "hindi") {
 
     this.NAME = name;
     this.AGE = age;
@@ -72,7 +77,7 @@ const MyNewObj = {
     item1: 200,
     item2: 300,
     item4: 400,
-    TotalCart: function(){
+    TotalCart: function () {
         return this.item1 + this.item2 + this.item4
     }
 }
