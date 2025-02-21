@@ -17,8 +17,7 @@ function Use_state() {
   return (
     <>
       <hr />
-      <br />
-      <h1>Hooks: {count}</h1>
+      <h1>Use_State: {count}</h1>
       <hr />
       <button onClick={Addcount}>count + + </button>
       <button onClick={Subcount}>count - -</button>
