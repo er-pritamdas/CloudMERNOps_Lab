@@ -8,7 +8,7 @@ const obj1 = {};
 console.log(`${typeof obj1}`)
 
 
-// Creating Obj usaing New Keyword
+// Creating Obj usaing New Keyword : This is Singleton Object
 obj = new Object()
 obj.name = "Pritam";
 obj.surname = "Das";
@@ -70,6 +70,10 @@ function Indians(name, age, height, nation = "hindi") {
 }
 ma = new Indians("Ruma", 34, 234)
 console.log(JSON.stringify(ma));
+Indians.prototype.Info = function(){
+    return `${this.NAME} || ${this.AGE} || ${this.H} || ${this.NATION}`
+}
+console.log(ma.Info())
 
 
 // Disply object Keys and Valsues:
@@ -86,4 +90,23 @@ console.log(Object.entries(MyNewObj)) //Returns an Array of array of Each Entrie
 console.log(Object.values(MyNewObj)) //Returns an Array of Values
 console.log(JSON.stringify(MyNewObj)) // Returns a String
 console.log(typeof JSON.stringify(MyNewObj)) // Returns a String
+
+// Object Predefined Methods
+
+// Assign ()
+let PritObj = {
+    name: "pritam",
+    age: 25,
+} 
+let PoulObj = {
+    name: "Poulami Das",
+    age: 18,
+}
+let JassiObj = Object.assign({}, PritObj) // PritObj to empty Obj
+console.log(JassiObj)
+Object.assign(PritObj, PoulObj) // PoulObj to PritObj
+console.log(PritObj)
+
+
+
 

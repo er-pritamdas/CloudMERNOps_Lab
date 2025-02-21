@@ -169,3 +169,4 @@ add();
 add();
 add();
 // the counter is now 3
+

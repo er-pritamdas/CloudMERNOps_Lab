@@ -1,5 +1,5 @@
 {
-  "name": "progress-pulse",
+  "name": "react-learning",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,8 +15,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
-    "@splinetool/react-spline": "^4.0.0",
-    "@splinetool/runtime": "^1.9.63",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
