@@ -9,7 +9,7 @@ function Use_effect() {
         let NewArr = []
         for (let i = 1; i <= 10; i++) {
             NewArr.push(
-                <p>{Number} * {i} = {Number * i}</p>
+                <p key={i}>{Number} * {i} = {Number * i}</p> // This key is not much important, we will understad later 
             )
             setArr(NewArr)
         }
