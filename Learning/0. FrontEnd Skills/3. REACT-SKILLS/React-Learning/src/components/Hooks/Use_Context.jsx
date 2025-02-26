@@ -28,15 +28,16 @@ import {useState, useEffect, useContext} from 'react'
 
 function Component3(){
    
-    let [Count, SetCount] = useState(1)
+    let [Count, SetCount] = useState(null)
 
     return(
         <>
             {/* This will create the value as global */}
-            <GlobalObject.Provider value={[Count, SetCount]}>
+            <GlobalObject.Provider value={{Count, SetCount}}>
                 {/* This Tag will return the gloabl Object as count
                 So That I can use the Count Variable anywhere */}
-                <div>The Value of Count is {Count} || 1st Component</div>
+                {/* <div>The Value of Count is {Count} || 1st Component</div> */}
+                {/* <div>{Count.username}</div> */}
                 <Component4 />
             </GlobalObject.Provider>
         </>
@@ -44,14 +45,14 @@ function Component3(){
 }
 
 function Component4(){
+    const [username, setUsername] = useState('pritam')
+    const [password, setPassword] = useState('123456789')
+    const {SetCount} = useContext(GlobalObject)
+    SetCount({username, setUsername})
     
-    const Count = useContext(GlobalObject)
     return(
         <>
-        {/* How to use the {Count} Variable */}
-        {Count[1](2)} 
-        {/* We can now able to access the Count without Using */}
-        <div>The Value of Count is {Count} || 1st Component</div>
+        <div>The Value of Count is {username} </div>
         </>
     )
 }
