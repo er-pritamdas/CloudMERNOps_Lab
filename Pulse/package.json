@@ -1,0 +1,16 @@
+{
+  "name": "pulse",
+  "version": "1.0.0",
+  "description": "FullStack ",
+  "keywords": [
+    "Javascript",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "pritam",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
