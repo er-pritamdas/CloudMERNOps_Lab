@@ -1,1 +1,2 @@
 - [Model Link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)
+-  mongodb+srv://pritam:<db_password>@pulse.dg0ag.mongodb.net/?retryWrites=true&w=majority&appName=Pulse
