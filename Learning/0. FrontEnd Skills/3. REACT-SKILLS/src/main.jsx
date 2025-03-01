@@ -8,17 +8,19 @@ import Use_context from "./components/Hooks/Use_Context.jsx"
 import BGChanger from './Projects/bgChanger/BGChanger.jsx'
 import PassGen from './Projects/PasswordGenerator/PassGen.jsx'
 import CurrencyConv from './Projects/CurrencyConvertor.jsx/CurrencyConv.jsx'
+import BackEnd from './components/BackEnd/BackEnd.jsx'
 
 let firstName = "Pritam"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Props Name = {firstName} lastName = "Das" />
     <Use_state />
-    <Use_effect /> */}
+    <Use_effect />
     <Use_context />
-    {/* <BGChanger />
+    <BGChanger />
     <PassGen />
     <CurrencyConv /> */}
+    <BackEnd/>
   </StrictMode>,
 )
 /*
