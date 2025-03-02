@@ -1,6 +1,6 @@
 // This server donot do hot reloading. So, we have to restart the server to see the changes.
 // To run the server, type "node index.js" in the terminal.
-const express = require('express'); //  this is common js
+// const express = require('express'); //  this is common js
 // import express from 'express'; // This is module js 
 require('dotenv').config(); // This is used to use the environment variable.
 // This is used to use the environment variable. We have to create a file named ".env" in the root directory. And we have to write the environment variable in that file.
