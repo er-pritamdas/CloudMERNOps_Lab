@@ -5,11 +5,18 @@ import dotenv from 'dotenv';
 // but here we have configure one more line to make it work.
 dotenv.config({path:"./env"});
 
-import express from 'express';
 import connectDB from './db/index.js';
+import app from './app.js';
 
 
-connectDB();
+connectDB().then(()=>{
+    app.listen(process.env.PORT, ()=>{
+        console.log(`Server is running on port ${process.env.PORT}`);
+    });
+}).catch((error)=>{
+    console.log(`Error After MongoDB Connection: ${error.message}`);
+    process.exit(1);
+});
 
 
 
