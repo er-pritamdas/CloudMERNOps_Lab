@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Learning-blue?style=flat-square"/>
   <img src="https://img.shields.io/badge/Focus-Fullstack+DevOps-green?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Made%20by-Pritam%20Das-blueviolet?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Made%20by-Pritam%20Das%20|%20Jyotsna%20Bharti-blueviolet?style=flat-square"/>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 ## 📘 About This Repository
 
-> **DevMERN-Ops** is a personal repository curated by [Pritam Das](https://www.linkedin.com/in/pritamdas22/), designed to document and demonstrate skills in:
+> **DevMERN-Ops** is a personal repository curated by [Pritam Das]() & [Jyotsna Bharti](), designed to document and demonstrate skills in:
 >
 > - MERN stack development
 > - Infrastructure as Code
