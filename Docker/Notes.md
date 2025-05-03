@@ -76,7 +76,7 @@ A **container** is a standard unit of software that packages up code and all its
 | Portability    | Lower (OS-specific)        | High (runs anywhere Docker runs) |
 | Resource Usage | High                       | Low                              |
 
-![Containers vs VMs](./Imgs/Containers%20VS%20Vms.png)
+![Containers vs VMs](./Visuals/Containers%20VS%20Vms.png)
 
 ---
 
@@ -111,7 +111,7 @@ graph LR
 
 <br>
 
-![Docker Architecture](./Imgs/Docker%20Architecture.png)
+![Docker Architecture](./Visuals/Docker%20Architecture.png)
 
 ---
 
@@ -149,7 +149,7 @@ They use a layered file system where each layer represents a step, such as insta
 
 2. **Create an image from a Dockerfile**
 
-   ![Containers vs VMs](./Imgs/Image%20Creation.png)
+   ![Containers vs VMs](./Visuals/Image%20Creation.png)
 
    You can define a custom image using a `Dockerfile`. This file contains instructions like the base image, commands to run, files to copy, etc.  
    Example:
@@ -211,7 +211,7 @@ A Docker container is a runtime instance of a Docker image. They are created by 
 
 ### Docter Conatiner Lifecycle
 
-![Containers vs VMs](./Imgs/Container%20Lifecycle.jpg)
+![Containers vs VMs](./Visuals/Container%20Lifecycle.jpg)
 
 Docker containers go through several states during their lifecycle. Understanding these states helps with effective container management and debugging.
 
