@@ -69,7 +69,7 @@ Each folder represents a **tool or technology**, containing:
     <td align="center"><img title="Linux" height="50" src="images/Linux.svg"></td>
     <td align="center"><img title="Jenkins" height="50" src="images/Jenkins.svg"></td>
     <td align="center"><img title="Ubuntu" height="50" src="images/Ubuntu.svg"></td>
-    <td align="center"><img title="Docker" height="50" src="images/Docker.svg"></td>
+    <td align="center"><a href="https://github.com/er-pritamdas/CloudMERNOps_Lab/tree/main/Docker"><img title="Docker" height="50" src="images/Docker.svg"></a></td>
     <td align="center"><img title="Terraform" height="50" src="images/Terraform.svg"></td>
     <td align="center"><img title="Jira" height="50" src="images/jira.svg"></td>
 
@@ -108,12 +108,12 @@ DevMERN-Ops/
 ├── MERN/
 └── ...
 ```
+
 <br>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Quote-Inspiration-blueviolet?style=flat-square" />
 </p>
-
 
 <p align="center">
   <i>“Jack of all trades, master of none, but oftentimes better than master of one.”</i><br>
