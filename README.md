@@ -16,11 +16,12 @@
 
 > **DevMERN-Ops** is a personal repository curated by [Pritam Das]() & [Jyotsna Bharti](), designed to document and demonstrate skills in:
 >
-> - MERN stack development
-> - Infrastructure as Code
-> - CI/CD pipelines
-> - Containerization & Orchestration
-> - Cloud platforms & DevOps best practices
+> - 🌐 **MERN Stack Development**: Build full-stack applications using MongoDB, Express, React, and Node.js.
+> - 🛠️ **Infrastructure as Code (IaC)**: Automate infrastructure provisioning using tools like Terraform and Ansible.
+> - 🚀 **CI/CD Pipelines**: Implement continuous integration and delivery pipelines with Jenkins, GitHub Actions, and more.
+> - 🐳 **Containerization & Orchestration**: Master Docker and Kubernetes for scalable deployments.
+> - ☁️ **Cloud Platforms**: Work with AWS, Azure, and other cloud providers to deploy and manage applications.
+> - 🔄 **DevOps Best Practices**: Learn automation, monitoring, and collaboration techniques.
 
 Each folder represents a **tool or technology**, containing:
 
@@ -62,16 +63,16 @@ Each folder represents a **tool or technology**, containing:
 <h2 align="center">☁️ Cloud & DevOps</h2>
 <table align="center">
   <tr>
-    <td align="center"><img title="vSphere" height="50" src="images/vSphere.svg"></td>
-    <td align="center"><img title="Azure" height="50" src="images/Azure.svg"></td>
-    <td align="center"><img title="Azure" height="50" src="images/AWS.svg"></td>
-    <td align="center"><img title="Ansible" height="50" src="images/Ansible.svg"></td>
-    <td align="center"><img title="Linux" height="50" src="images/Linux.svg"></td>
-    <td align="center"><img title="Jenkins" height="50" src="images/Jenkins.svg"></td>
-    <td align="center"><img title="Ubuntu" height="50" src="images/Ubuntu.svg"></td>
+    <td align="center"><a href=""><img title="vSphere" height="50" src="images/vSphere.svg"></a></td>
+    <td align="center"><a href=""><img title="Azure" height="50" src="images/Azure.svg"></a></td>
+    <td align="center"><a href=""><img title="Azure" height="50" src="images/AWS.svg"></a></td>
+    <td align="center"><a href=""><img title="Ansible" height="50" src="images/Ansible.svg"></a></td>
+    <td align="center"><a href=""><img title="Linux" height="50" src="images/Linux.svg"></a></td>
+    <td align="center"><a href=""><img title="Jenkins" height="50" src="images/Jenkins.svg"></a></td>
+    <td align="center"><a href=""><img title="Ubuntu" height="50" src="images/Ubuntu.svg"></a></td>
     <td align="center"><a href="https://github.com/er-pritamdas/CloudMERNOps_Lab/tree/main/Docker"><img title="Docker" height="50" src="images/Docker.svg"></a></td>
-    <td align="center"><img title="Terraform" height="50" src="images/Terraform.svg"></td>
-    <td align="center"><img title="Jira" height="50" src="images/jira.svg"></td>
+    <td align="center"><a href="https://github.com/er-pritamdas/CloudMERNOps_Lab/tree/main/Terraform"><img title="Terraform" height="50" src="images/Terraform.svg"></a></td>
+    <td align="center"><a href=""><img title="Jira" height="50" src="images/jira.svg"></a></td>
 
   </tr>
 </table>
