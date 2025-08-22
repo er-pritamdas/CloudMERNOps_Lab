@@ -28,12 +28,10 @@ output "instance_id" {
   value       = aws_instance.demo.id
 }
 
-output "instance_public_ip" {
-  description = "Public IP of the EC2 instance"
-  value       = aws_instance.demo.public_ip
+output "instance_public_ips" {
+  value = { for name, instance in aws_instance.demo : name => instance.public_ip }
 }
 
-output "instance_private_ip" {
-  description = "Private IP of the EC2 instance"
-  value       = aws_instance.demo.private_ip
+output "instance_private_ips" {
+  value = { for name, instance in aws_instance.demo : name => instance.private_ip }
 }

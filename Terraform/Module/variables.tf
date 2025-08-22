@@ -1,3 +1,6 @@
+# ---------------------------
+# Variables
+# ---------------------------
 variable "project_name" {
   description = "Base name used for tagging all resources"
   type        = string
@@ -38,4 +41,13 @@ variable "instance_type" {
   description = "EC2 instance type"
   type        = string
   default     = "t2.micro"
+}
+
+variable "ec2_instances" {
+  description = "Map of EC2 instance names to AMI IDs"
+  type        = map(string)
+  default = {
+    "web-1" = var.ami_id
+    "web-2" = var.ami_id
+  }
 }
