@@ -25,7 +25,7 @@ output "security_group_id" {
 
 output "instance_id" {
   description = "The ID of the EC2 instance"
-  value       = aws_instance.demo.id
+  value = { for name, instance in aws_instance.demo : name => instance.id }
 }
 
 output "instance_public_ips" {
@@ -34,4 +34,7 @@ output "instance_public_ips" {
 
 output "instance_private_ips" {
   value = { for name, instance in aws_instance.demo : name => instance.private_ip }
+}
+output "key_name" {
+  value = "${var.project_name}-key.pem"
 }

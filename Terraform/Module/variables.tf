@@ -34,20 +34,11 @@ variable "availability_zone" {
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
   type        = string
-  default     = "ami-0dee22c13ea7a9a67" # Amazon Linux 2 in ap-south-1
+  default     = "ami-0861f4e788f5069dd" # Amazon Linux 2 in ap-south-1
 }
 
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
   default     = "t2.micro"
-}
-
-variable "ec2_instances" {
-  description = "Map of EC2 instance names to AMI IDs"
-  type        = map(string)
-  default = {
-    "web-1" = var.ami_id
-    "web-2" = var.ami_id
-  }
 }

@@ -99,6 +99,13 @@ resource "aws_security_group" "demo_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]  # Allow Jenkins access
+  }
+  
   egress {
     from_port   = 0
     to_port     = 0
@@ -111,8 +118,15 @@ resource "aws_security_group" "demo_sg" {
   }
 }
 
+locals {
+  ec2_instances = {
+    jenkins      = var.ami_id
+    docker_nginx = var.ami_id
+  }
+}
+
 resource "aws_instance" "demo" {
-  for_each = var.ec2_instances
+  for_each = local.ec2_instances
 
   ami                         = each.value
   instance_type               = var.instance_type

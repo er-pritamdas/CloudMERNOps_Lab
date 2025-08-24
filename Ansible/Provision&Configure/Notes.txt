@@ -1,0 +1,56 @@
+--------------------------
+How to Install Ansible
+-------------------------
+sudo dnf update -y
+sudo dnf install -y ansible-core
+ansible --version
+ansible [core 2.15.3]
+  config file = None
+  configured module search path = ['/home/cloudshell-user/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.9/site-packages/ansible
+  ansible collection location = /home/cloudshell-user/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.9.23 (main, Aug 11 2025, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-5)] (/usr/bin/python3.9)
+  jinja version = 3.1.4
+  libyaml = True
+
+-------------------------
+How to Install terraform 
+--------------------------
+wget https://releases.hashicorp.com/terraform/VERSION/terraform_VERSION_linux_amd64.zip
+unzip terraform_1.5.7_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+~ $ terraform --version
+Terraform v1.9.5
+on linux_amd64
+
+Your version of Terraform is out of date! The latest version
+is 1.13.0. You can update by downloading from https://www.terraform.io/downloads.html
+~ $ 
+
+-----------------------
+Folder Structure
+-----------------------
+  ~ $ tree 
+.
+├── ansible
+│   ├── configure.yml (Must Have)
+│   ├── inventory.ini
+│   └── ProgressPulse-key.pem
+├── Auto.sh (Must Have)
+├── terraform
+│   ├── instance_ips.json
+│   ├── main.tf (Must Have)
+│   ├── outputs.tf (Must Have)
+│   ├── ProgressPulse-key.pem
+│   ├── terraform-outputs.txt
+│   ├── terraform.tfstate
+│   ├── terraform.tfstate.backup
+│   └── variables.tf (Must Have)
+├── TerraformInstallationFile
+│   ├── LICENSE.txt
+│   └── terraform_1.9.5_linux_amd64.zip
+└── terraform.tfstate
+
+3 directories, 15 files
+~ $ 

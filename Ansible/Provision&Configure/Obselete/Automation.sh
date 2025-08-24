@@ -65,4 +65,3 @@ echo ">>> Inventory created at $ANSIBLE_DIR/inventory.ini"
 # ---------------------------
 echo ">>> Running Ansible playbook..."
 ansible-playbook -i $ANSIBLE_DIR/inventory.ini $PLAYBOOK
-

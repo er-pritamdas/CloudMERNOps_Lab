@@ -1,34 +1,76 @@
 ---
-- name: Configure Jenkins Server
+- name: Configure Jenkins Server (WAR-based) on Amazon Linux 2023
   hosts: jenkins
   become: yes
   tasks:
+
     - name: Update all packages
       yum:
         name: "*"
         state: latest
 
-    - name: Install Java (required for Jenkins)
+    - name: Install Java 17 (Amazon Corretto) for AL2023
       yum:
-        name: java-11-openjdk
+        name:
+          - java-17-amazon-corretto
+          - java-17-amazon-corretto-devel
         state: present
 
-    - name: Add Jenkins repo
+    - name: Ensure JAVA_HOME is set for all users
+      copy:
+        dest: /etc/profile.d/java.sh
+        content: |
+          export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto.x86_64
+          export PATH=$JAVA_HOME/bin:$PATH
+        owner: root
+        group: root
+        mode: "0644"
+
+    - name: Ensure wget is installed
+      yum:
+        name: wget
+        state: present
+
+    - name: Create Jenkins directory
+      file:
+        path: /opt/jenkins
+        state: directory
+        owner: ec2-user
+        group: ec2-user
+        mode: "0755"
+
+    - name: Download Jenkins WAR
       get_url:
-        url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
-        dest: /etc/yum.repos.d/jenkins.repo
+        url: https://get.jenkins.io/war-stable/2.479.1/jenkins.war
+        dest: /opt/jenkins/jenkins.war
+        mode: "0755"
+        owner: ec2-user
+        group: ec2-user
 
-    - name: Import Jenkins key
-      rpm_key:
-        state: present
-        key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    - name: Create systemd service for Jenkins
+      copy:
+        dest: /etc/systemd/system/jenkins.service
+        content: |
+          [Unit]
+          Description=Jenkins Continuous Integration Server
+          After=network.target
 
-    - name: Install Jenkins
-      yum:
-        name: jenkins
-        state: present
+          [Service]
+          User=ec2-user
+          Environment="JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto.x86_64"
+          ExecStart=/usr/bin/java -jar /opt/jenkins/jenkins.war --httpPort=8080
+          Restart=on-failure
 
-    - name: Start and enable Jenkins
+          [Install]
+          WantedBy=multi-user.target
+        owner: root
+        group: root
+        mode: "0644"
+
+    - name: Reload systemd
+      command: systemctl daemon-reload
+
+    - name: Start and enable Jenkins service
       service:
         name: jenkins
         state: started
@@ -38,6 +80,7 @@
   hosts: docker_nginx
   become: yes
   tasks:
+
     - name: Update all packages
       yum:
         name: "*"
@@ -64,3 +107,4 @@
         name: nginx
         state: started
         enabled: yes
+
