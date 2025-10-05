@@ -1,0 +1,26 @@
+You currently have a stateless API deployed on a single VM with standard compute and disk.
+Each incoming request triggers:
+A call to a third-party API (e.g., Gemini API) with fixed rate limits:
+1000 requests / minute
+50,000 requests / hour
+500,000 requests / day
+A SQL database call (e.g., Postgres) with limited max connections (e.g., 100), which cannot be scaled further.
+Today, traffic is modest. But moving forward, you expect random spikes of lakhs of requests within short periods.
+Constraints:
+You can change the infra
+You cannot change the third-party API’s rate limits or the database’s configuration.
+Incoming requests must not fail due to hitting external rate limits or DB connection limits.
+
+Your Task
+Design the infra that enables the system to handle large, unpredictable traffic spikes while:
+Respecting third-party API rate limits
+Respecting DB connection caps
+Scaling infrastructure horizontally or otherwise to handle bursts
+Ensuring reliability and resilience under load
+
+Expected Output
+An architecture diagram (and optionally a process flow diagram) illustrating your proposed design.
+Bullet points describing how your components work together (e.g., scaling, throttling, queuing, etc.).
+You may use any tools / platforms / architectural patterns you’re comfortable with.
+
+
